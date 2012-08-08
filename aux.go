@@ -7,12 +7,17 @@ import (
 	"time"
 )
 
+// Auxiliary global functions 
+
+// Set true to display more information
 var Verbose = false //true
 
 func init() {
 	flag.BoolVar(&Verbose, "v", false, "verbose")
 }
 
+// Used to display the time that took an operation. 
+// Returns the string with the information to display and when Verbose is set, it displays it on os.Stdout 
 func Took(t time.Duration, s string, args ...interface{}) string {
 	tt := fmt.Sprintf("[%v] ", t)
 	text := fmt.Sprintf(tt+s+"\n", args...)
