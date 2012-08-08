@@ -42,7 +42,6 @@ func MinInt(a, b int) int {
 	return b
 }
 
-//type BOOL int16
 const (
 	False = int16(iota)
 	True
